@@ -1,22 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Animal Crossing Guess Who (Multiplayer)
+
+Two-player Guess Who built with Next.js and WebSockets. Each room gets a random
+subset of villagers, and every card shows personality, zodiac, species, hobby,
+and gender to help narrow down guesses.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in two browser tabs.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## How To Play
+
+1. Player 1 creates a room and shares the code.
+2. Player 2 joins with the code.
+3. Each player selects a secret villager.
+4. Take turns asking questions and making guesses.
+5. Click a villager card to gray it out on your board.
+
+## Data & Images
+
+- Villager data: `data/villagers.json`
+- Villager images: `public/villagers/`
+
+## Notes
+
+- Rooms are stored in memory and reset on server restart.
+- The default pool is 24 villagers (selectable in the lobby).
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
